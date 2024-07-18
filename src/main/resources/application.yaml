@@ -1,0 +1,20 @@
+spring:
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres
+    user: postgres
+    password: 1111
+    locations: db/migration
+  r2dbc:
+    username: postgres
+    password: password
+    url: r2dbc:postgresql://localhost:5432/postgres
+    pool:
+      enabled: true
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+logging:
+  level:
+    web: debug
+    sql: debug
